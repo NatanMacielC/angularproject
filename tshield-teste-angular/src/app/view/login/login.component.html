@@ -1,0 +1,128 @@
+ <!-- ========== HEADER ========== -->
+<header id="header" class="u-header u-header--bg-transparent u-header--abs-top">
+    <div class="u-header__section">
+    <div id="logoAndNav" class="container-fluid">
+        <!-- Nav -->
+        <nav class="navbar navbar-expand u-header__navbar">
+
+        <div class="col-lg-5 col-xl-4 d-flex justify-content-center position-absolute top-0 left-0 text-center p-5">
+            <!-- White Logo -->
+            <a class="d-none d-lg-flex navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white"
+            href="../home/index.html" aria-label="Front">
+            <img id="custom-login-logo-id" src="../../../assets/img/logos/logo-tshield-branco.png" />
+            </a>
+            <!-- End White Logo -->
+
+            <!-- Default Logo -->
+            <a class="d-flex d-lg-none navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-collapsed"
+            href="index.html" aria-label="Front">
+            <img src="../../../assets/img/logos/logo-tshield.png" />
+            </a>
+            <!-- End Default Logo -->
+        </div>
+        </nav>
+        <!-- End Nav -->
+    </div>
+    </div>
+</header>
+<!-- ========== END HEADER ========== -->
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main">
+    <!-- Form -->
+    <div class="d-flex align-items-center position-relative height-lg-100vh">
+    <div id="custom-login-bg-id"
+        class="col-lg-5 col-xl-4 d-none d-lg-flex align-items-center gradient-half-primary-v1 height-lg-100vh px-0">
+        <div class="w-100 p-5">
+        <!-- SVG Quote -->
+        <figure *ngIf="false" class="text-center mb-5 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="40px" height="40px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+            <path class="fill-white" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
+                C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3
+                c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8
+                C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z" />
+            </svg>
+        </figure>
+        <!-- End SVG Quote -->
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row no-gutters">
+        <div class="col-md-8 col-lg-7 col-xl-6 offset-md-2 offset-lg-2 offset-xl-3 space-3 space-lg-0">
+            <!-- Form -->
+            <form class="js-validate mt-5">
+            <!-- Title -->
+            <div class="mb-7">
+                <h2 class="h3 text-primary font-weight-normal mb-0">Seja <span class="font-weight-semi-bold">bem
+                    vindo</span></h2>
+                <p>Faça o seu login.</p>
+            </div>
+            <!-- End Title -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+                <label class="form-label" for="signinSrEmail">CPF</label>
+                <input type="text" formControlName="login" class="form-control" name="login" id="signinSrEmail"
+                mask="000.000.000-00" placeholder=" Digite o CPF">
+                <!-- <div id="signinSrEmail-error" class="invalid-feedback">Por
+                favor, informe o CPF.</div> -->
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+                <label class="form-label" for="signinSrPassword">
+                <span class="d-flex justify-content-between align-items-center">
+                    Senha
+                </span>
+                </label>
+                <input type="password" formControlName="password" class="form-control" name="password"
+                id="signinSrPassword" placeholder="********">
+                <!-- <div id="signinSrEmail-error"
+                class="invalid-feedback">
+                Por favor, informe a sua senha.</div> -->
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+                <label class="form-label" for="signinSrPassword">
+                <span class="d-flex justify-content-between align-items-center">
+                    Empresa
+                </span>
+                </label>
+                <input type="text" formControlName="client" class="form-control" name="company" id="signinSrCompany"
+                placeholder="Empresa">
+            </div>
+
+            <!-- <div class="js-form-message form-group">
+                <div id="signinSrEmail-error" class="invalid-feedback">
+                Por favor, informe nome da sua empresa.</div>                  
+            </div> -->
+            <!-- End Form Group -->
+
+            <!-- Button -->
+            <div class="row align-items-center mb-5">
+                <div class="col-6">
+                <a class="link-muted font-weight-normal" href="javascript:void()">Esqueceu
+                    sua senha?</a>
+                </div>
+
+                <div class="col-6 text-right">
+                <button type="submit" class="btn btn-primary transition-3d-hover" routerLink="/home">Entrar</button>
+                </div>
+            </div>
+            <!-- End Button -->
+            </form>
+            <!-- End Form -->
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- End Form -->
+</main>
+<!-- ========== END MAIN ========== -->
