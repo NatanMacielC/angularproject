@@ -18,7 +18,9 @@ export class UsersListComponent implements OnInit {
 
   getAll() {
     this.userService.getAll().subscribe((result: any) => {
-      this.usersList = result.data;
+      this.usersList = result.data.filter(
+        (value: { active: boolean }) => value.active
+      );
     });
   }
 }

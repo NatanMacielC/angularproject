@@ -14,6 +14,7 @@
           <th scope="col">Nome</th>
           <th scope="col">Email</th>
           <th scope="col">Perfil</th>
+          <th scope="col">Foto</th>
         </tr>
       </thead>
       <tbody>
@@ -22,6 +23,13 @@
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
           <td>{{ user.profile_name }}</td>
+          <td>
+            <img
+              class="img"
+              src="{{ user.photo_url }}"
+              *ngIf="user.photo_url"
+            />
+          </td>
         </tr>
       </tbody>
     </table>
