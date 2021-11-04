@@ -1,0 +1,29 @@
+<div class="bg-primary custom-breadcumb-bg-classname">
+  <div class="container space-1">
+    <ol breadcumb class="breadcrumb breadcrumb-white breadcrumb-no-gutter mb-0">
+      <li class="breadcrumb-item active" aria-current="page">Lista</li>
+    </ol>
+  </div>
+</div>
+<div class="bg-light d-flex justify-content-center my-custom-scrollbar">
+  <div class="container space-2">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Email</th>
+          <th scope="col">Perfil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of usersList">
+          <th scope="row">{{ user.id }}</th>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.profile_name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

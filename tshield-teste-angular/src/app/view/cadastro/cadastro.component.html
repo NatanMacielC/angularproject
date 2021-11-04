@@ -1,0 +1,109 @@
+<div class="bg-primary custom-breadcumb-bg-classname">
+  <div class="container space-1">
+    <ol breadcumb class="breadcrumb breadcrumb-white breadcrumb-no-gutter mb-0">
+      <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
+    </ol>
+  </div>
+</div>
+<div class="bg-light">
+  <div class="container space-2">
+    <form class="js-validate mt-5" [formGroup]="formUser">
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault01">Nome</label>
+          <input
+            formControlName="name"
+            type="text"
+            class="form-control"
+            id="validationDefault01"
+            placeholder="Nome"
+            required
+          />
+          <span
+            style="color: red"
+            *ngIf="isSubmitted && fc.name.errors"
+            class="help-block"
+            >Coloque o nome!</span
+          >
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault02">CPF</label>
+          <input
+            formControlName="cpf"
+            type="text"
+            class="form-control"
+            id="validationDefault02"
+            placeholder="CPF"
+            required
+          />
+          <span
+            style="color: red"
+            *ngIf="isSubmitted && fc.cpf.errors"
+            class="help-block"
+            >Coloque o cpf!</span
+          >
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationDefaultUsername">Email</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input
+              formControlName="email"
+              type="text"
+              class="form-control"
+              id="validationDefaultUsername"
+              placeholder="Email"
+              aria-describedby="inputGroupPrepend2"
+              required
+            />
+          </div>
+          <span
+            style="color: red"
+            *ngIf="isSubmitted && fc.email.errors"
+            class="help-block"
+            >Coloque o email!</span
+          >
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault03">Telefone</label>
+          <input
+            formControlName="telephone"
+            type="text"
+            class="form-control"
+            id="validationDefault03"
+            placeholder="Telefone"
+            required
+          />
+          <span
+            style="color: red"
+            *ngIf="isSubmitted && fc.telephone.errors"
+            class="help-block"
+            >Coloque o telefone!</span
+          >
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault04">Profile ID</label>
+          <input
+            formControlName="profile_id"
+            type="text"
+            class="form-control"
+            id="validationDefault04"
+            placeholder="Profile ID"
+            required
+          />
+          <span
+            style="color: red"
+            *ngIf="isSubmitted && fc.profile_id.errors"
+            class="help-block"
+            >Coloque o id!</span
+          >
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" (click)="save()">
+        Salvar
+      </button>
+    </form>
+  </div>
+</div>
